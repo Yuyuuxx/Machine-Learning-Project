@@ -1,45 +1,36 @@
-🧠 Product Category Classifier using Machine Learning
-📋 Project Overview
+# 🧠 Product Category Classifier using Machine Learning
 
-This project uses machine learning to automatically predict a product’s category based on its title or description.
+## 📋 Project Overview
 
-It takes a dataset of products, cleans the data, converts text into numbers using TF-IDF, and trains a Logistic Regression model to learn how different product titles relate to their categories.
+This project uses machine learning to automatically predict a product’s category based on its title or description.  
+
+It takes a dataset of products, cleans the data, converts text into numbers using TF-IDF, and trains a Logistic Regression model to learn how different product titles relate to their categories.  
 
 Once trained, the model can instantly predict a category for any new product name entered by the user.
 
-⚙️ How It Works
+## ⚙️ How It Works
 
-Loads and cleans a dataset of product titles and their categories.
+- Loads and cleans a dataset of product titles and their categories  
+- Converts the product text into numerical features using TF-IDF (Term Frequency–Inverse Document Frequency)  
+- Trains a Logistic Regression model to recognize patterns between words and categories  
+- Saves the trained model for future use  
+- Lets the user type in a product name and predicts its category in real time
 
-Converts the product text into numerical features using TF-IDF (Term Frequency–Inverse Document Frequency).
+## 💬 Example
 
-Trains a Logistic Regression model to recognize patterns between words and categories.
+You can type something like *wireless headphones*, and the program might predict the category **electronics**.  
+Type *exit* to close the program.
 
-Saves the trained model for future use.
+## 🚀 Key Features
 
-Lets the user type in a product name and predicts its category in real time.
+- Simple and beginner-friendly machine learning workflow  
+- Interactive text-based category prediction  
+- Reusable saved model for future predictions  
+- Uses popular Python libraries like pandas and scikit-learn
 
-💬 Example
+## 🔮 Possible Improvements
 
-You can type something like wireless headphones, and the program might predict the category “electronics”.
-Type exit to close the program.
-
-🚀 Key Features
-
-Simple and beginner-friendly machine learning workflow
-
-Interactive text-based category prediction
-
-Reusable saved model for future predictions
-
-Uses popular Python libraries like pandas and scikit-learn
-
-🔮 Possible Improvements
-
-Add model accuracy testing and validation
-
-Save both the model and vectorizer for deployment
-
-Build a web interface using Flask or Streamlit
-
-Experiment with other algorithms or text preprocessing methods
+- Add model accuracy testing and validation  
+- Save both the model and vectorizer for deployment  
+- Build a web interface using Flask or Streamlit  
+- Experiment with other algorithms or text preprocessing methods
