@@ -16,6 +16,15 @@ Once trained, the model can instantly predict a category for any new product nam
 - Saves the trained model for future use  
 - Lets the user type in a product name and predicts its category in real time
 
+## 💡 How to Use
+
+1. Make sure you have Python installed on your system.  
+2. Install the required libraries by typing `pip install pandas scikit-learn` in your terminal.  
+3. Place your dataset file (CSV or Excel) in the project folder.  
+4. Run the Python script to train the model.  
+5. After training, enter any product name when prompted to get its predicted category.  
+6. Type `exit` to close the program.
+
 ## 💬 Example
 
 You can type something like *wireless headphones*, and the program might predict the category **electronics**.  
