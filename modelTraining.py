@@ -17,8 +17,9 @@ Y = df['Category_Label']
 # TF-IDF vectorization
  
 vectorizer = TfidfVectorizer()
- 
+
 X_tfidf = vectorizer.fit_transform(X)
+
 
 # Model training
 
@@ -26,6 +27,10 @@ model = LogisticRegression(max_iter=1000)
  
 model.fit(X_tfidf, Y)
 
-# with open("MLModel.pkl", "wb") as file:
-#     pkl.dump(model, file)
+print("\nModel training complete.")
+
+# Saving model to a pkl file
+
+with open("MLModel.pkl", "wb") as file:
+    pkl.dump(model, file)
 

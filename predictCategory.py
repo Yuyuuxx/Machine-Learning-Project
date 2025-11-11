@@ -6,8 +6,6 @@ import pandas as pd
 
 from sklearn.linear_model import LogisticRegression
 
-from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
-
 # Loading the data
 
 df = pd.read_csv('products_cleaned.csv')
@@ -27,9 +25,20 @@ X_tfidf = vectorizer.fit_transform(X)
 with open("MLModel.pkl", "rb") as file:
     model = pkl.load(file)
 
-y_pred = model.predict(X_tfidf)
+while True:
+ 
+    user_input = input("Enter a product: ")
+    
+    user_tfidf = vectorizer.transform([user_input])
 
-print(f"\nLogistic Regression - Classification Report:")
-print(classification_report(Y, y_pred),'\n')
-print("Accuracy:\n", accuracy_score(Y, y_pred),'\n')
-print("Confusion Matrix:\n", confusion_matrix(Y, y_pred))
+    prediction = model.predict(user_tfidf)[0]
+
+    print(f"\nPredicted Category: {prediction}")
+    
+    if user_input.lower() == 'exit':
+ 
+        print("Exiting category classifier.")
+ 
+        break
+
+
